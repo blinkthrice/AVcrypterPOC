@@ -3,4 +3,5 @@ Simple POC to crypt any malicious file and output an exe that runs and bypasses 
 
 <b>UPDATES</b> 
 > Updated payload upload protocol and filetype (txt > rtf) <br />
-> Fixed compiler threading 
+> Fixed compiler threading <br />
+> Fixed stub 'resolveDB' bug
